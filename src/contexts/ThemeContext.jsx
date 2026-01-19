@@ -12,6 +12,84 @@ export const useTheme = () => {
 
 // DEEP VISUAL ANALYSIS OF EACH WEDDING CARD - EXTRACTED DESIGN DNA
 export const themes = {
+    'sahiba': {
+        id: 'sahiba',
+        name: 'Sahiba - Sky Palace',
+        cardImage: '/uploaded_image_1768851433860.png',
+
+        // EXTRACTED COLOR PALETTE (from Sahiba card visual analysis)
+        colors: {
+            primary: '#87CEEB',        // Sky Blue (background)
+            secondary: '#F4A896',      // Coral/Salmon Pink (dome)
+            accent: '#6F4E37',         // Chocolate Brown (frame)
+            background: '#FFFEF2',     // Cream/Ivory (content area)
+            dark: '#5C4033',           // Dark Brown (ornate patterns)
+            text: '#4A4A4A',           // Charcoal for readability
+        },
+
+        // EXTRACTED TYPOGRAPHY ANALYSIS
+        typography: {
+            coupleNames: {
+                font: 'Great Vibes',           // Elegant script
+                weight: 400,
+                size: 'extra-large',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Playfair Display',     // Elegant serif
+                weight: 500,
+                size: 'medium',
+                letterSpacing: '0.05em',
+                textTransform: 'none',
+            },
+            body: {
+                font: 'Poppins',
+                weight: 300,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+        },
+
+        // LAYOUT GEOMETRY & SPACING
+        layout: {
+            contentAlignment: 'center',
+            margins: 'generous',
+            padding: 'large',
+            borderRadius: 'arch-ornate',       // Moroccan arch shape
+            borderThickness: '3px',
+            shadowDepth: 'medium',
+        },
+
+        // DECORATIVE LANGUAGE
+        decorations: {
+            style: 'moroccan-palace',
+            density: 'high',
+            elements: ['dome', 'arches', 'peacock', 'palm-leaves', 'geometric-patterns'],
+            corners: 'ornate-brown',
+            dividers: 'architectural',
+            patterns: 'islamic-geometric',
+        },
+
+        // VISUAL BALANCE
+        balance: {
+            negativeSpace: '35%',
+            visualWeight: 'symmetrical',
+            hierarchy: 'architecture-dominant',
+            contrast: 'high',
+        },
+
+        // MOOD & ATMOSPHERE
+        mood: {
+            elegance: 'very-high',
+            tradition: 'high',
+            modernity: 'medium',
+            luxury: 'palace-luxury',
+            warmth: 'warm-exotic',
+        },
+    },
+
     'shahid-meera': {
         id: 'shahid-meera',
         name: 'Shahid & Meera - Ornate Floral',
@@ -382,7 +460,7 @@ export const themes = {
 export const ThemeProvider = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState(() => {
         const saved = localStorage.getItem('weddingTheme');
-        return saved || 'shahid-meera';
+        return saved || 'sahiba';  // Default to Sahiba theme
     });
 
     const theme = themes[currentTheme];
