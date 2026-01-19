@@ -5,6 +5,7 @@ import MusicToggle from './components/MusicToggle';
 import FloatingActionButton from './components/FloatingActionButton';
 import WhatsAppShare from './components/WhatsAppShare';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import { AudioProvider } from './contexts/AudioContext';
 
 function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -14,17 +15,19 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
-      <MusicToggle />
-      <LanguageSwitcher />
-      {showInvitation && <FloatingActionButton />}
-      {showInvitation && <WhatsAppShare />}
-      {!showInvitation ? (
-        <EntryScreen onOpenInvitation={handleOpenInvitation} />
-      ) : (
-        <MainInvitation />
-      )}
-    </div>
+    <AudioProvider>
+      <div className="min-h-screen">
+        <MusicToggle />
+        <LanguageSwitcher />
+        {showInvitation && <FloatingActionButton />}
+        {showInvitation && <WhatsAppShare />}
+        {!showInvitation ? (
+          <EntryScreen onOpenInvitation={handleOpenInvitation} />
+        ) : (
+          <MainInvitation />
+        )}
+      </div>
+    </AudioProvider>
   );
 }
 

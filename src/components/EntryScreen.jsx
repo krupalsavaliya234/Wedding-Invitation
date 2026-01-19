@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAudio } from '../contexts/AudioContext';
 
 const EntryScreen = ({ onOpenInvitation }) => {
     const { t } = useTranslation();
+    const { play } = useAudio();
+    const [showToast, setShowToast] = useState(false);
+
+    const handleOpenClick = async () => {
+        // Try to play music
+        const played = await play();
+
+        // Show toast if music didn't start
+        if (!played) {
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 3000);
+        }
+
+        // Navigate to main invitation
+        onOpenInvitation();
+    };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-maroon via-cream to-gold mandala-pattern relative overflow-hidden">
+            {/* Toast Notification */}
+            {showToast && (
+                <div className="fixed top-24 right-6 z-50 bg-maroon text-cream px-6 py-3 rounded-lg shadow-xl animate-slide-up">
+                    <p className="font-poppins text-sm">Click the music icon to play 🎵</p>
+                </div>
+            )}
+
             {/* Decorative elements */}
             <div className="absolute top-10 left-10 w-32 h-32 border-4 border-gold rounded-full opacity-20 animate-pulse-slow"></div>
             <div className="absolute bottom-10 right-10 w-40 h-40 border-4 border-maroon rounded-full opacity-20 animate-pulse-slow"></div>
@@ -46,7 +70,7 @@ const EntryScreen = ({ onOpenInvitation }) => {
 
                 {/* Open invitation button */}
                 <button
-                    onClick={onOpenInvitation}
+                    onClick={handleOpenClick}
                     className="group relative px-12 py-4 bg-maroon text-cream font-playfair text-xl font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up"
                     style={{ animationDelay: '0.9s' }}
                 >

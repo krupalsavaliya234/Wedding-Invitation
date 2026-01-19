@@ -1,31 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useAudio } from '../contexts/AudioContext';
 
 const MusicToggle = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [audio] = useState(new Audio('/wedding-music.mp3')); // You'll need to add your music file
-
-    useEffect(() => {
-        audio.loop = true;
-
-        return () => {
-            audio.pause();
-        };
-    }, [audio]);
-
-    const toggleMusic = () => {
-        if (isPlaying) {
-            audio.pause();
-        } else {
-            audio.play().catch(err => {
-                console.log('Audio playback failed:', err);
-            });
-        }
-        setIsPlaying(!isPlaying);
-    };
+    const { isPlaying, toggle } = useAudio();
 
     return (
         <button
-            onClick={toggleMusic}
+            onClick={toggle}
             className="fixed top-6 right-6 z-50 bg-maroon text-gold p-4 rounded-full shadow-lg hover:bg-gold hover:text-maroon transition-all duration-300 hover:scale-110 animate-fade-in"
             aria-label={isPlaying ? 'Pause Music' : 'Play Music'}
         >
