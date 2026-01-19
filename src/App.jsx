@@ -4,6 +4,7 @@ import MainInvitation from './components/MainInvitation';
 import MusicToggle from './components/MusicToggle';
 import FloatingActionButton from './components/FloatingActionButton';
 import WhatsAppShare from './components/WhatsAppShare';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <MusicToggle />
+      <LanguageSwitcher />
       {showInvitation && <FloatingActionButton />}
       {showInvitation && <WhatsAppShare />}
       {!showInvitation ? (
