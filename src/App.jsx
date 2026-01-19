@@ -13,6 +13,7 @@ import { AudioProvider } from './contexts/AudioContext';
 import AdminLogin from './pages/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
 import Dashboard from './pages/admin/Dashboard';
+import ThemeSelector from './pages/admin/ThemeSelector';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         }
       >
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="theme" element={<ThemeSelector />} />
         <Route path="rsvp" element={<div className="text-cream">RSVP Management - Coming Soon</div>} />
         <Route path="media" element={<div className="text-cream">Media Gallery - Coming Soon</div>} />
         <Route path="analytics" element={<div className="text-cream">Analytics - Coming Soon</div>} />

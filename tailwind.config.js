@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        maroon: '#8B4049',
+        maroon: '#800000',
         gold: '#D4AF37',
-        cream: '#FFFEF2',
-        obsidian: '#6B7F5F',
-        'teal-glow': '#8B9D83',
-        'violet-glow': '#E8A598',
-        'maroon-neon': '#E8A598',
+        cream: '#FFFDD0',
+        obsidian: '#0a0a0f',
+        'teal-glow': '#00d4ff',
+        'violet-glow': '#b794f6',
+        'maroon-neon': '#ff0040',
         'sage-green': '#8B9D83',
         'coral-pink': '#E8A598',
         'olive-green': '#6B7F5F',

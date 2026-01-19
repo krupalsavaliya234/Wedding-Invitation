@@ -3,9 +3,23 @@
 
 @import "tailwindcss";
 
-/* ===== LUXURY 3D GLASSMORPHISM FOUNDATION ===== */
+/* ===== DYNAMIC THEME SYSTEM ===== */
 
-/* Deep Obsidian Background with Volumetric Lighting */
+/* CSS Variables for Dynamic Theming - Default: Shahid & Meera (First Uploaded Image) */
+:root {
+  --color-primary: #8B9D83;
+  /* Sage Green */
+  --color-secondary: #E8A598;
+  /* Coral Pink */
+  --color-accent: #D4AF37;
+  /* Gold */
+  --color-background: #FFFEF2;
+  /* Cream */
+  --color-dark: #6B7F5F;
+  /* Olive Green */
+}
+
+/* Original Dark Theme Background */
 body {
   background: linear-gradient(135deg,
       #0a0a0f 0%,
@@ -30,14 +44,14 @@ body {
 }
 
 .glass-card-premium {
-  background: rgba(255, 254, 242, 0.12);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(30px) saturate(200%);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  border: 2px solid rgba(212, 175, 55, 0.2);
   box-shadow:
-    0 20px 60px rgba(232, 165, 152, 0.2),
-    0 10px 40px rgba(139, 157, 131, 0.15),
-    inset 0 2px 4px rgba(255, 254, 242, 0.2);
+    0 20px 60px rgba(0, 212, 255, 0.15),
+    0 10px 40px rgba(183, 148, 246, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15);
   transform-style: preserve-3d;
 }
 
@@ -59,7 +73,7 @@ body {
     inset 0 3px 6px rgba(255, 255, 255, 0.2);
 }
 
-/* Glow Effects */
+/* Glow Effects - Original Theme */
 .glow-teal {
   box-shadow:
     0 0 20px rgba(0, 212, 255, 0.5),
@@ -79,6 +93,21 @@ body {
     0 0 20px rgba(212, 175, 55, 0.6),
     0 0 40px rgba(212, 175, 55, 0.4),
     0 0 60px rgba(212, 175, 55, 0.2);
+}
+
+/* Dynamic Theme Glow Effects */
+.glow-coral {
+  box-shadow:
+    0 0 20px rgba(232, 165, 152, 0.6),
+    0 0 40px rgba(232, 165, 152, 0.4),
+    0 0 60px rgba(232, 165, 152, 0.2);
+}
+
+.glow-sage {
+  box-shadow:
+    0 0 20px rgba(139, 157, 131, 0.5),
+    0 0 40px rgba(139, 157, 131, 0.3),
+    0 0 60px rgba(139, 157, 131, 0.1);
 }
 
 /* Holographic Border */
@@ -174,7 +203,7 @@ body {
 }
 
 .text-gradient-holographic {
-  background: linear-gradient(135deg, #E8A598, #D4AF37, #8B9D83, #E8A598);
+  background: linear-gradient(135deg, #00d4ff, #b794f6, #D4AF37, #00d4ff);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
