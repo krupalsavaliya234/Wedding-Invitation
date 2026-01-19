@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const EntryScreen = ({ onOpenInvitation }) => {
+    const { t } = useTranslation();
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-maroon via-cream to-gold mandala-pattern relative overflow-hidden">
             {/* Decorative elements */}
@@ -22,17 +25,17 @@ const EntryScreen = ({ onOpenInvitation }) => {
 
                 {/* Welcome text */}
                 <h1 className="font-playfair text-5xl md:text-7xl font-bold text-maroon mb-6 animate-slide-up">
-                    Welcome
+                    {t('welcome')}
                 </h1>
 
                 <p className="font-poppins text-xl md:text-2xl text-gold mb-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-                    You are cordially invited to the wedding of
+                    {t('invite_message')}
                 </p>
 
                 {/* Couple names */}
                 <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.6s' }}>
                     <h2 className="font-playfair text-6xl md:text-8xl font-bold text-gradient mb-4">
-                        Priya & Raj
+                        {t('wedding_title')}
                     </h2>
                     <div className="flex items-center justify-center mt-6">
                         <div className="h-px w-24 bg-gold"></div>
@@ -47,7 +50,7 @@ const EntryScreen = ({ onOpenInvitation }) => {
                     className="group relative px-12 py-4 bg-maroon text-cream font-playfair text-xl font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up"
                     style={{ animationDelay: '0.9s' }}
                 >
-                    <span className="relative z-10">Open Invitation</span>
+                    <span className="relative z-10">{t('open_invitation')}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-gold to-maroon opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
 

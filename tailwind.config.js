@@ -12,8 +12,10 @@ export default {
         cream: '#FFFDD0',
       },
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
+        playfair: ['Playfair Display', 'serif'],
         poppins: ['Poppins', 'sans-serif'],
+        hind: ['Hind', 'sans-serif'],
+        gujarati: ['Noto Sans Gujarati', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1.5s ease-in-out',
