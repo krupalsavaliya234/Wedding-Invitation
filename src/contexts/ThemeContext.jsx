@@ -10,17 +10,17 @@ export const useTheme = () => {
     return context;
 };
 
-// Theme configurations based on the 5 uploaded wedding cards
+// Theme configurations based on the 5 uploaded wedding cards - AUTHENTIC INDIAN WEDDING COLORS
 export const themes = {
     'shahid-meera': {
         id: 'shahid-meera',
-        name: 'Shahid & Meera - Ornate Floral',
+        name: 'Royal Maroon & Gold',
         colors: {
-            primary: '#8B9D83',      // Sage Green
-            secondary: '#E8A598',    // Coral Pink
-            accent: '#D4AF37',       // Gold
-            background: '#FFFEF2',   // Cream
-            dark: '#6B7F5F',         // Olive Green
+            primary: '#8B0000',      // Deep Maroon (Traditional Bridal)
+            secondary: '#FFD700',    // Royal Gold
+            accent: '#DC143C',       // Crimson Red
+            background: '#FFF5E6',   // Warm Cream
+            dark: '#4A0000',         // Dark Maroon
         },
         fonts: {
             signature: 'Great Vibes',
@@ -31,13 +31,13 @@ export const themes = {
     },
     'ranveer-deepika': {
         id: 'ranveer-deepika',
-        name: 'Ranveer & Deepika - Loving Paradise',
+        name: 'Marigold & Saffron',
         colors: {
-            primary: '#8B0000',      // Deep Maroon
-            secondary: '#FFD700',    // Gold
-            accent: '#DC143C',       // Crimson
-            background: '#FFF5E6',   // Cream
-            dark: '#4A0000',         // Dark Maroon
+            primary: '#FF8C00',      // Marigold Orange
+            secondary: '#FFD700',    // Golden Yellow
+            accent: '#FF6347',       // Vibrant Orange-Red
+            background: '#FFFAF0',   // Floral White
+            dark: '#CC6600',         // Deep Orange
         },
         fonts: {
             signature: 'Alex Brush',
@@ -48,13 +48,13 @@ export const themes = {
     },
     'aarav-aavi': {
         id: 'aarav-aavi',
-        name: 'Aarav & Aavi - Aquamarine Peacock',
+        name: 'Royal Purple & Gold',
         colors: {
-            primary: '#40E0D0',      // Turquoise
-            secondary: '#FFD700',    // Gold
-            accent: '#98D8C8',       // Mint
-            background: '#F7F9F9',   // Light Cream
-            dark: '#2C7873',         // Teal
+            primary: '#6A0DAD',      // Royal Purple
+            secondary: '#FFD700',    // Rich Gold
+            accent: '#9370DB',       // Medium Purple
+            background: '#FFF8F0',   // Ivory
+            dark: '#4B0082',         // Indigo
         },
         fonts: {
             signature: 'Great Vibes',
@@ -65,13 +65,13 @@ export const themes = {
     },
     'aarav-aarohi': {
         id: 'aarav-aarohi',
-        name: 'Aarav & Aarohi - Vinayaka',
+        name: 'Emerald & Gold',
         colors: {
-            primary: '#FFD700',      // Gold/Yellow
-            secondary: '#00CED1',    // Turquoise
-            accent: '#FF69B4',       // Pink
-            background: '#FFFACD',   // Light Yellow
-            dark: '#DAA520',         // Goldenrod
+            primary: '#50C878',      // Emerald Green
+            secondary: '#FFD700',    // Gold
+            accent: '#2E8B57',       // Sea Green
+            background: '#F5FFFA',   // Mint Cream
+            dark: '#006400',         // Dark Green
         },
         fonts: {
             signature: 'Great Vibes',
@@ -82,13 +82,13 @@ export const themes = {
     },
     'raj-simran': {
         id: 'raj-simran',
-        name: 'Raj & Simran - Sweet William',
+        name: 'Rose Pink & Gold',
         colors: {
-            primary: '#FF69B4',      // Hot Pink
-            secondary: '#FFB6C1',    // Light Pink
-            accent: '#D4AF37',       // Gold
+            primary: '#E91E63',      // Vibrant Pink
+            secondary: '#FFD700',    // Gold
+            accent: '#FF69B4',       // Hot Pink
             background: '#FFF0F5',   // Lavender Blush
-            dark: '#C71585',         // Medium Violet Red
+            dark: '#C2185B',         // Deep Pink
         },
         fonts: {
             signature: 'Alex Brush',

@@ -5,27 +5,34 @@
 
 /* ===== DYNAMIC THEME SYSTEM ===== */
 
-/* CSS Variables for Dynamic Theming - Default: Shahid & Meera (First Uploaded Image) */
+/* CSS Variables for Dynamic Th`eming - Default: Royal Maroon & Gold (Indian Wedding) */
 :root {
-  --color-primary: #8B9D83;
-  /* Sage Green */
-  --color-secondary: #E8A598;
-  /* Coral Pink */
-  --color-accent: #D4AF37;
-  /* Gold */
-  --color-background: #FFFEF2;
-  /* Cream */
-  --color-dark: #6B7F5F;
-  /* Olive Green */
+  --color-primary: #8B0000;
+  /* Deep Maroon */
+  --color-secondary: #FFD700;
+  /* Royal Gold */
+  --color-accent: #DC143C;
+  /* Crimson Red */
+  --color-background: #FFF5E6;
+  /* Warm Cream */
+  --color-dark: #4A0000;
+  /* Dark Maroon */
 }
 
-/* Original Dark Theme Background */
+/* Default Theme Background - Shahid & Meera (Sage Green) */
 body {
   background: linear-gradient(135deg,
-      #0a0a0f 0%,
-      #1a0a1f 40%,
-      #0f0a1a 70%,
-      #0a0a0f 100%);
+      #6B7F5F 0%,
+      /* Olive Green */
+      #8B9D83 30%,
+      /* Sage Green */
+      #A8B5A0 50%,
+      /* Light Sage */
+      #8B9D83 70%,
+      /* Sage Green */
+      #6B7F5F 100%
+      /* Olive Green */
+    );
   background-attachment: fixed;
   min-height: 100vh;
   position: relative;

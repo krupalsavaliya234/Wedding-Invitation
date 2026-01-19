@@ -9,29 +9,28 @@ const ThemeSelector = () => {
     const themeCards = [
         {
             id: 'shahid-meera',
-            name: 'Ornate Floral',
-            image: '/theme-previews/shahid-meera.png',
-            description: 'Sage green, coral pink, and gold with ornate floral borders',
+            name: 'Royal Maroon & Gold',
+            description: 'Traditional deep maroon and royal gold - Classic Indian bridal colors',
         },
         {
             id: 'ranveer-deepika',
-            name: 'Loving Paradise',
-            description: 'Deep maroon and gold with traditional elegance',
+            name: 'Marigold & Saffron',
+            description: 'Vibrant marigold orange and golden yellow - Festival celebration',
         },
         {
             id: 'aarav-aavi',
-            name: 'Aquamarine Peacock',
-            description: 'Turquoise and gold with peacock motifs',
+            name: 'Royal Purple & Gold',
+            description: 'Regal purple and rich gold - Royal elegance',
         },
         {
             id: 'aarav-aarohi',
-            name: 'Vinayaka',
-            description: 'Vibrant yellow and turquoise with Ganesh blessings',
+            name: 'Emerald & Gold',
+            description: 'Fresh emerald green and gold - Nature-inspired luxury',
         },
         {
             id: 'raj-simran',
-            name: 'Sweet William',
-            description: 'Soft pink and gold with minimal floral design',
+            name: 'Rose Pink & Gold',
+            description: 'Vibrant rose pink and gold - Modern romantic',
         },
     ];
 

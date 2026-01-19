@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 const VolumetricLighting = () => {
     return (
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-            {/* Sage Green Light Source - Top Left */}
+            {/* Deep Maroon Light Source - Top Left */}
             <motion.div
                 className="absolute w-[600px] h-[600px] rounded-full"
                 style={{
-                    background: 'radial-gradient(circle, rgba(139, 157, 131, 0.15) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(139, 0, 0, 0.2) 0%, transparent 70%)',
                     filter: 'blur(80px)',
                     top: '-10%',
                     left: '-10%',
@@ -25,11 +25,11 @@ const VolumetricLighting = () => {
                 }}
             />
 
-            {/* Coral Pink Light Source - Top Right */}
+            {/* Royal Gold Light Source - Top Right */}
             <motion.div
                 className="absolute w-[500px] h-[500px] rounded-full"
                 style={{
-                    background: 'radial-gradient(circle, rgba(232, 165, 152, 0.12) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%)',
                     filter: 'blur(70px)',
                     top: '10%',
                     right: '-5%',
@@ -46,11 +46,11 @@ const VolumetricLighting = () => {
                 }}
             />
 
-            {/* Gold Light Source - Center */}
+            {/* Crimson Light Source - Center */}
             <motion.div
                 className="absolute w-[700px] h-[700px] rounded-full"
                 style={{
-                    background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(220, 20, 60, 0.12) 0%, transparent 70%)',
                     filter: 'blur(90px)',
                     top: '40%',
                     left: '50%',
@@ -58,7 +58,7 @@ const VolumetricLighting = () => {
                 }}
                 animate={{
                     scale: [1, 1.2, 1],
-                    opacity: [0.1, 0.15, 0.1],
+                    opacity: [0.12, 0.18, 0.12],
                 }}
                 transition={{
                     duration: 12,
@@ -67,11 +67,11 @@ const VolumetricLighting = () => {
                 }}
             />
 
-            {/* Sage Green Light Source - Bottom Right */}
+            {/* Gold Light Source - Bottom Right */}
             <motion.div
                 className="absolute w-[550px] h-[550px] rounded-full"
                 style={{
-                    background: 'radial-gradient(circle, rgba(139, 157, 131, 0.12) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(255, 215, 0, 0.13) 0%, transparent 70%)',
                     filter: 'blur(75px)',
                     bottom: '5%',
                     right: '10%',
@@ -88,11 +88,11 @@ const VolumetricLighting = () => {
                 }}
             />
 
-            {/* Coral Pink Light Source - Bottom Left */}
+            {/* Maroon Light Source - Bottom Left */}
             <motion.div
                 className="absolute w-[480px] h-[480px] rounded-full"
                 style={{
-                    background: 'radial-gradient(circle, rgba(232, 165, 152, 0.1) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(139, 0, 0, 0.15) 0%, transparent 70%)',
                     filter: 'blur(65px)',
                     bottom: '15%',
                     left: '5%',
@@ -109,11 +109,11 @@ const VolumetricLighting = () => {
                 }}
             />
 
-            {/* Subtle Floral Pattern Overlay */}
+            {/* Traditional Mandala Pattern Overlay */}
             <div
-                className="absolute inset-0 opacity-[0.02]"
+                className="absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E8A598' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='15' cy='15' r='1'/%3E%3Ccircle cx='45' cy='45' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFD700' fill-opacity='1'%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='60' cy='60' r='2'/%3E%3Ccircle cx='20' cy='60' r='2'/%3E%3Ccircle cx='60' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
                     backgroundRepeat: 'repeat',
                 }}
             />
