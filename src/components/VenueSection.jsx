@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const VenueSection = () => {
+    const { t } = useTranslation();
     // Venue details - replace with actual venue information
     const venue = {
         name: 'The Grand Palace',
@@ -70,14 +72,14 @@ const VenueSection = () => {
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                 </svg>
-                                <span>Get Directions</span>
+                                <span>{t('get_directions')}</span>
                             </div>
                         </a>
 
                         {/* Additional Info */}
                         <div className="mt-6 p-4 bg-gold/10 rounded-lg">
                             <p className="font-poppins text-sm text-gray-700 text-center">
-                                <span className="font-semibold text-maroon">Parking Available</span> • Free Valet Service
+                                <span className="font-semibold text-maroon">{t('parking_available')}</span> • {t('free_valet')}
                             </p>
                         </div>
                     </div>

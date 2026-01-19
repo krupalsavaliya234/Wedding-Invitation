@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const PhotoGallery = () => {
+    const { t } = useTranslation();
     const [selectedImage, setSelectedImage] = useState(null);
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
@@ -71,10 +73,10 @@ const PhotoGallery = () => {
                     </div>
 
                     <h2 className="font-playfair text-3xl md:text-5xl font-bold text-maroon mb-4">
-                        Our Memories
+                        {t('our_memories')}
                     </h2>
                     <p className="font-poppins text-base md:text-lg text-gray-700">
-                        Capturing the beautiful moments of our journey
+                        {t('gallery_subtitle')}
                     </p>
                 </div>
 

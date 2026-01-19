@@ -1,7 +1,9 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const websiteUrl = window.location.origin;
 
     return (
@@ -10,10 +12,10 @@ const Footer = () => {
                 {/* QR Code Section */}
                 <div className="mb-8">
                     <h3 className="font-playfair text-2xl md:text-3xl font-bold text-gold mb-4">
-                        Scan to View Invitation
+                        {t('scan_to_view')}
                     </h3>
                     <p className="font-poppins text-cream/80 text-sm md:text-base mb-6">
-                        Share this QR code on your printed cards
+                        {t('qr_subtitle')}
                     </p>
 
                     <div className="inline-block bg-white p-4 md:p-6 rounded-lg shadow-xl">
@@ -39,16 +41,16 @@ const Footer = () => {
 
                 {/* Wedding Message */}
                 <p className="font-poppins text-cream text-sm md:text-base mb-2">
-                    We look forward to celebrating with you!
+                    {t('footer_message')}
                 </p>
 
                 <p className="font-playfair text-gold text-lg md:text-xl font-semibold mb-6">
-                    Priya & Raj
+                    {t('wedding_title')}
                 </p>
 
                 {/* Copyright */}
                 <p className="font-poppins text-cream/60 text-xs md:text-sm">
-                    © 2026 Wedding Invitation. Made with ❤️
+                    {t('made_with_love')}
                 </p>
             </div>
         </footer>
