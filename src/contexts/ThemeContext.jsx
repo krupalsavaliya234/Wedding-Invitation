@@ -10,98 +10,377 @@ export const useTheme = () => {
     return context;
 };
 
-// Theme configurations based on the 5 uploaded wedding cards - AUTHENTIC INDIAN WEDDING COLORS
+// DEEP VISUAL ANALYSIS OF EACH WEDDING CARD - EXTRACTED DESIGN DNA
 export const themes = {
     'shahid-meera': {
         id: 'shahid-meera',
-        name: 'Royal Maroon & Gold',
+        name: 'Shahid & Meera - Ornate Floral',
+        cardImage: '/uploaded_image_0_1768849578330.png',
+
+        // EXTRACTED COLOR PALETTE (from visual analysis)
         colors: {
-            primary: '#8B0000',      // Deep Maroon (Traditional Bridal)
-            secondary: '#FFD700',    // Royal Gold
-            accent: '#DC143C',       // Crimson Red
-            background: '#FFF5E6',   // Warm Cream
-            dark: '#4A0000',         // Dark Maroon
+            primary: '#8B9D83',        // Sage green from border foliage
+            secondary: '#E8A598',      // Coral pink from lotus flowers
+            accent: '#D4AF37',         // Antique gold from corner filigree
+            background: '#FFFEF2',     // Cream white from content area
+            dark: '#6B7F5F',           // Olive green from deep leaves
+            text: '#4A4A4A',           // Charcoal for readability
         },
-        fonts: {
-            signature: 'Great Vibes',
-            heading: 'Cinzel',
-            body: 'Poppins',
+
+        // EXTRACTED TYPOGRAPHY ANALYSIS
+        typography: {
+            coupleNames: {
+                font: 'Great Vibes',           // Flowing script, elegant cursive
+                weight: 400,
+                size: 'extra-large',           // Dominant visual element
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Playfair Display',     // Elegant serif with high contrast
+                weight: 600,
+                size: 'medium',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+            },
+            body: {
+                font: 'Poppins',               // Clean, modern sans-serif
+                weight: 300,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
         },
-        decorations: 'floral',
+
+        // LAYOUT GEOMETRY & SPACING
+        layout: {
+            contentAlignment: 'center',
+            margins: 'generous',               // Ample white space
+            padding: 'large',
+            borderRadius: 'scalloped',         // Ornate arch shape
+            borderThickness: '2px',
+            shadowDepth: 'medium',
+        },
+
+        // DECORATIVE LANGUAGE
+        decorations: {
+            style: 'ornate-floral',
+            density: 'high',                   // Rich, detailed borders
+            elements: ['lotus', 'hibiscus', 'leaves', 'vines', 'paisley'],
+            corners: 'elaborate',              // Gold filigree corners
+            dividers: 'floral-ornamental',
+            patterns: 'mandala-subtle',
+        },
+
+        // VISUAL BALANCE
+        balance: {
+            negativeSpace: '40%',              // 40% breathing room
+            visualWeight: 'symmetrical',
+            hierarchy: 'couple-names-dominant',
+            contrast: 'medium-high',
+        },
+
+        // MOOD & ATMOSPHERE
+        mood: {
+            elegance: 'high',
+            tradition: 'medium-high',
+            modernity: 'medium',
+            luxury: 'premium',
+            warmth: 'warm',
+        },
     },
+
     'ranveer-deepika': {
         id: 'ranveer-deepika',
-        name: 'Marigold & Saffron',
+        name: 'Ranveer & Deepika - Loving Paradise',
+        cardImage: '/uploaded_image_1_1768849578330.png',
+
         colors: {
-            primary: '#FF8C00',      // Marigold Orange
-            secondary: '#FFD700',    // Golden Yellow
-            accent: '#FF6347',       // Vibrant Orange-Red
-            background: '#FFFAF0',   // Floral White
-            dark: '#CC6600',         // Deep Orange
+            primary: '#8B0000',        // Deep maroon from dress
+            secondary: '#FFD700',      // Rich gold from decorations
+            accent: '#DC143C',         // Crimson from flowers
+            background: '#FFF5E6',     // Warm cream
+            dark: '#4A0000',           // Dark maroon shadows
+            text: '#3D3D3D',
         },
-        fonts: {
-            signature: 'Alex Brush',
-            heading: 'Playfair Display',
-            body: 'Poppins',
+
+        typography: {
+            coupleNames: {
+                font: 'Alex Brush',
+                weight: 400,
+                size: 'extra-large',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Playfair Display',
+                weight: 500,
+                size: 'medium',
+                letterSpacing: '0.08em',
+                textTransform: 'none',
+            },
+            body: {
+                font: 'Poppins',
+                weight: 300,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
         },
-        decorations: 'traditional',
+
+        layout: {
+            contentAlignment: 'center',
+            margins: 'moderate',
+            padding: 'medium',
+            borderRadius: 'rounded',
+            borderThickness: '1px',
+            shadowDepth: 'soft',
+        },
+
+        decorations: {
+            style: 'traditional-romantic',
+            density: 'high',
+            elements: ['roses', 'marigold', 'lattice', 'pillars'],
+            corners: 'ornate-gold',
+            dividers: 'simple-line',
+            patterns: 'geometric-subtle',
+        },
+
+        balance: {
+            negativeSpace: '35%',
+            visualWeight: 'symmetrical',
+            hierarchy: 'couple-illustration-dominant',
+            contrast: 'high',
+        },
+
+        mood: {
+            elegance: 'very-high',
+            tradition: 'high',
+            modernity: 'low',
+            luxury: 'premium',
+            warmth: 'very-warm',
+        },
     },
+
     'aarav-aavi': {
         id: 'aarav-aavi',
-        name: 'Royal Purple & Gold',
+        name: 'Aarav & Aavi - Aquamarine Peacock',
+        cardImage: '/uploaded_image_2_1768849578330.png',
+
         colors: {
-            primary: '#6A0DAD',      // Royal Purple
-            secondary: '#FFD700',    // Rich Gold
-            accent: '#9370DB',       // Medium Purple
-            background: '#FFF8F0',   // Ivory
-            dark: '#4B0082',         // Indigo
+            primary: '#40E0D0',        // Turquoise from background
+            secondary: '#FFD700',      // Gold accents
+            accent: '#98D8C8',         // Mint green
+            background: '#F7F9F9',     // Light cream
+            dark: '#2C7873',           // Deep teal
+            text: '#2F4F4F',
         },
-        fonts: {
-            signature: 'Great Vibes',
-            heading: 'Playfair Display',
-            body: 'Poppins',
+
+        typography: {
+            coupleNames: {
+                font: 'Great Vibes',
+                weight: 400,
+                size: 'extra-large',
+                letterSpacing: 'wide',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Playfair Display',
+                weight: 400,
+                size: 'small',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+            },
+            body: {
+                font: 'Poppins',
+                weight: 300,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
         },
-        decorations: 'peacock',
+
+        layout: {
+            contentAlignment: 'center',
+            margins: 'generous',
+            padding: 'large',
+            borderRadius: 'arch',
+            borderThickness: '0px',
+            shadowDepth: 'none',
+        },
+
+        decorations: {
+            style: 'nature-peacock',
+            density: 'medium',
+            elements: ['peacock', 'feathers', 'flowers', 'leaves'],
+            corners: 'organic',
+            dividers: 'decorative-line',
+            patterns: 'floral-border',
+        },
+
+        balance: {
+            negativeSpace: '45%',
+            visualWeight: 'asymmetrical-balanced',
+            hierarchy: 'background-dominant',
+            contrast: 'medium',
+        },
+
+        mood: {
+            elegance: 'high',
+            tradition: 'medium',
+            modernity: 'high',
+            luxury: 'refined',
+            warmth: 'cool-fresh',
+        },
     },
+
     'aarav-aarohi': {
         id: 'aarav-aarohi',
-        name: 'Emerald & Gold',
+        name: 'Aarav & Aarohi - Vinayaka',
+        cardImage: '/uploaded_image_3_1768849578330.png',
+
         colors: {
-            primary: '#50C878',      // Emerald Green
-            secondary: '#FFD700',    // Gold
-            accent: '#2E8B57',       // Sea Green
-            background: '#F5FFFA',   // Mint Cream
-            dark: '#006400',         // Dark Green
+            primary: '#FFD700',        // Vibrant yellow/gold
+            secondary: '#00CED1',      // Turquoise accents
+            accent: '#FF69B4',         // Pink lotus
+            background: '#FFFACD',     // Light yellow
+            dark: '#DAA520',           // Goldenrod
+            text: '#4A4A4A',
         },
-        fonts: {
-            signature: 'Great Vibes',
-            heading: 'Bodoni Moda',
-            body: 'Poppins',
+
+        typography: {
+            coupleNames: {
+                font: 'Great Vibes',
+                weight: 400,
+                size: 'extra-large',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Bodoni Moda',
+                weight: 600,
+                size: 'medium',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+            },
+            body: {
+                font: 'Poppins',
+                weight: 400,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
         },
-        decorations: 'ganesh',
+
+        layout: {
+            contentAlignment: 'center',
+            margins: 'moderate',
+            padding: 'medium',
+            borderRadius: 'arch-ornate',
+            borderThickness: '3px',
+            shadowDepth: 'medium',
+        },
+
+        decorations: {
+            style: 'divine-traditional',
+            density: 'high',
+            elements: ['ganesh', 'lotus', 'fountain', 'trees', 'lanterns'],
+            corners: 'rounded-ornate',
+            dividers: 'ornamental',
+            patterns: 'mandala-prominent',
+        },
+
+        balance: {
+            negativeSpace: '30%',
+            visualWeight: 'center-heavy',
+            hierarchy: 'deity-dominant',
+            contrast: 'very-high',
+        },
+
+        mood: {
+            elegance: 'medium',
+            tradition: 'very-high',
+            modernity: 'low',
+            luxury: 'festive',
+            warmth: 'very-warm-vibrant',
+        },
     },
+
     'raj-simran': {
         id: 'raj-simran',
-        name: 'Rose Pink & Gold',
+        name: 'Raj & Simran - Sweet William',
+        cardImage: '/uploaded_image_4_1768849578330.png',
+
         colors: {
-            primary: '#E91E63',      // Vibrant Pink
-            secondary: '#FFD700',    // Gold
-            accent: '#FF69B4',       // Hot Pink
-            background: '#FFF0F5',   // Lavender Blush
-            dark: '#C2185B',         // Deep Pink
+            primary: '#FF69B4',        // Hot pink from text
+            secondary: '#FFB6C1',      // Light pink from flowers
+            accent: '#D4AF37',         // Gold accents
+            background: '#FFF0F5',     // Lavender blush
+            dark: '#C71585',           // Deep pink
+            text: '#5D5D5D',
         },
-        fonts: {
-            signature: 'Alex Brush',
-            heading: 'Playfair Display',
-            body: 'Poppins',
+
+        typography: {
+            coupleNames: {
+                font: 'Alex Brush',
+                weight: 400,
+                size: 'extra-large',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
+            headings: {
+                font: 'Playfair Display',
+                weight: 400,
+                size: 'small',
+                letterSpacing: '0.05em',
+                textTransform: 'none',
+            },
+            body: {
+                font: 'Poppins',
+                weight: 300,
+                size: 'small',
+                letterSpacing: 'normal',
+                textTransform: 'none',
+            },
         },
-        decorations: 'floral-minimal',
+
+        layout: {
+            contentAlignment: 'center',
+            margins: 'generous',
+            padding: 'large',
+            borderRadius: 'soft',
+            borderThickness: '0px',
+            shadowDepth: 'subtle',
+        },
+
+        decorations: {
+            style: 'minimal-floral',
+            density: 'low',
+            elements: ['roses', 'leaves', 'couple-illustration'],
+            corners: 'clean',
+            dividers: 'simple',
+            patterns: 'watercolor-subtle',
+        },
+
+        balance: {
+            negativeSpace: '50%',
+            visualWeight: 'light-airy',
+            hierarchy: 'couple-names-primary',
+            contrast: 'medium',
+        },
+
+        mood: {
+            elegance: 'high',
+            tradition: 'low',
+            modernity: 'very-high',
+            luxury: 'understated',
+            warmth: 'soft-romantic',
+        },
     },
 };
 
 export const ThemeProvider = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState(() => {
-        // Load theme from localStorage or default to first theme
         const saved = localStorage.getItem('weddingTheme');
         return saved || 'shahid-meera';
     });
@@ -109,16 +388,37 @@ export const ThemeProvider = ({ children }) => {
     const theme = themes[currentTheme];
 
     useEffect(() => {
-        // Save theme to localStorage
         localStorage.setItem('weddingTheme', currentTheme);
 
-        // Apply theme colors to CSS variables
+        // Apply extracted colors to CSS variables
         const root = document.documentElement;
         root.style.setProperty('--color-primary', theme.colors.primary);
         root.style.setProperty('--color-secondary', theme.colors.secondary);
         root.style.setProperty('--color-accent', theme.colors.accent);
         root.style.setProperty('--color-background', theme.colors.background);
         root.style.setProperty('--color-dark', theme.colors.dark);
+        root.style.setProperty('--color-text', theme.colors.text);
+
+        // Apply typography
+        root.style.setProperty('--font-signature', theme.typography.coupleNames.font);
+        root.style.setProperty('--font-heading', theme.typography.headings.font);
+        root.style.setProperty('--font-body', theme.typography.body.font);
+
+        // Apply layout properties
+        root.style.setProperty('--border-radius', theme.layout.borderRadius);
+        root.style.setProperty('--border-thickness', theme.layout.borderThickness);
+
+        // Update body background based on theme colors
+        const bgGradient = `linear-gradient(135deg, 
+            ${theme.colors.dark} 0%, 
+            ${theme.colors.primary} 30%, 
+            ${theme.colors.background} 50%, 
+            ${theme.colors.primary} 70%, 
+            ${theme.colors.dark} 100%
+        )`;
+        document.body.style.background = bgGradient;
+        document.body.style.backgroundAttachment = 'fixed';
+
     }, [currentTheme, theme]);
 
     const changeTheme = (themeId) => {
