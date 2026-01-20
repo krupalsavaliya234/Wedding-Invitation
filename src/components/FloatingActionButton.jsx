@@ -36,7 +36,7 @@ const FloatingActionButton = () => {
                         <button
                             key={item.id}
                             onClick={() => handleMenuClick(item.href)}
-                            className="flex items-center gap-3 bg-white text-maroon px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-slide-up"
+                            className="flex items-center gap-3 bg-white text-maroon px-5 py-3 rounded-wedding-xl shadow-wedding-gold border-2 border-border-gold hover:bg-gold hover:text-maroon transition-all duration-300 transform hover:scale-105 animate-slide-up"
                             style={{ animationDelay: `${index * 50}ms` }}
                         >
                             <span className="text-2xl">{item.icon}</span>
@@ -49,18 +49,18 @@ const FloatingActionButton = () => {
             {/* FAB Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform md:hidden ${isOpen
-                        ? 'bg-maroon rotate-45 scale-110'
-                        : 'bg-gradient-to-br from-maroon to-gold hover:scale-110'
+                className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-wedding-gold border-2 border-border-gold flex items-center justify-center transition-all duration-300 transform md:hidden ${isOpen
+                        ? 'bg-gradient-to-br from-maroon to-maroon/90 rotate-45 scale-110 text-gold'
+                        : 'bg-gradient-to-br from-maroon to-gold hover:scale-110 text-gold'
                     }`}
                 aria-label="Menu"
             >
                 {isOpen ? (
-                    <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 ) : (
-                    <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 )}

@@ -13,8 +13,11 @@ import { AudioProvider } from './contexts/AudioContext';
 import AdminLogin from './pages/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
 import Dashboard from './pages/admin/Dashboard';
+import InvitationsList from './pages/admin/InvitationsList';
+import InvitationForm from './pages/admin/InvitationForm';
 import ThemeSelector from './pages/admin/ThemeSelector';
 import ProtectedRoute from './components/ProtectedRoute';
+import DynamicInvitation from './pages/DynamicInvitation';
 
 function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -36,6 +39,9 @@ function App() {
         }
       >
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="invitations" element={<InvitationsList />} />
+        <Route path="invitations/new" element={<InvitationForm />} />
+        <Route path="invitations/edit/:id" element={<InvitationForm />} />
         <Route path="theme" element={<ThemeSelector />} />
         <Route path="rsvp" element={<div className="text-cream">RSVP Management - Coming Soon</div>} />
         <Route path="media" element={<div className="text-cream">Media Gallery - Coming Soon</div>} />
@@ -45,6 +51,7 @@ function App() {
       </Route>
 
       {/* Public Routes */}
+      <Route path="/invite/:slug" element={<DynamicInvitation />} />
       <Route
         path="/*"
         element={

@@ -1,36 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const StatsCard = ({ title, value, icon, color = 'teal', trend }) => {
+const StatsCard = ({ title, value, icon, color = 'gold', trend }) => {
     const colorClasses = {
-        teal: 'text-teal-glow shadow-glow-teal',
-        violet: 'text-violet-glow shadow-glow-violet',
-        gold: 'text-gold shadow-glow-gold',
+        gold: 'bg-gradient-to-br from-gold to-saffron text-maroon',
+        maroon: 'bg-gradient-to-br from-maroon to-maroon/80 text-gold',
+        saffron: 'bg-gradient-to-br from-saffron to-gold text-maroon',
     };
 
     return (
         <motion.div
             whileHover={{ scale: 1.02, y: -4 }}
-            className="glass-card-premium rounded-xl p-6 relative overflow-hidden group"
+            className="card-wedding bg-white border-2 border-border-gold p-6 relative overflow-hidden group hover:shadow-wedding-gold"
         >
-            {/* Shimmer Effect */}
-            <div className="absolute inset-0 shimmer-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
             {/* Content */}
             <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-lg glass-card ${colorClasses[color]}`}>
+                    <div className={`p-3 rounded-wedding-lg shadow-wedding-gold ${colorClasses[color] || colorClasses.gold}`}>
                         {icon}
                     </div>
                     {trend && (
-                        <div className={`text-sm font-poppins ${trend > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        <div className={`text-sm font-poppins font-semibold ${trend > 0 ? 'text-green-600' : 'text-red-600'}`}>
                             {trend > 0 ? '↑' : '↓'} {Math.abs(trend)}%
                         </div>
                     )}
                 </div>
 
-                <h3 className="text-cream/60 font-poppins text-sm mb-2">{title}</h3>
-                <p className="text-4xl font-cinzel font-bold text-gradient-gold">{value}</p>
+                <h3 className="text-text-secondary font-poppins text-sm mb-2 font-medium">{title}</h3>
+                <p className="text-4xl font-cinzel font-bold text-gold">{value}</p>
             </div>
         </motion.div>
     );

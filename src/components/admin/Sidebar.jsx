@@ -23,6 +23,15 @@ const Sidebar = () => {
             ),
         },
         {
+            name: 'Invitations',
+            path: '/admin/invitations',
+            icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+            ),
+        },
+        {
             name: 'RSVP Management',
             path: '/admin/rsvp',
             icon: (
@@ -62,21 +71,23 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="w-64 h-screen glass-card border-r border-teal-glow/10 flex flex-col">
+        <div className="w-64 h-screen bg-gradient-to-b from-maroon to-maroon/90 border-r-2 border-border-gold flex flex-col shadow-wedding-gold">
             {/* Logo */}
-            <div className="p-6 border-b border-teal-glow/10">
+            <div className="p-6 border-b-2 border-border-gold/30">
                 <div className="flex items-center gap-3">
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     >
-                        <svg className="w-10 h-10 text-gold glow-gold" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L9.5 8.5L3 9.5L7.5 14L6.5 21L12 17.5L17.5 21L16.5 14L21 9.5L14.5 8.5L12 2Z" />
-                        </svg>
+                        <div className="w-12 h-12 bg-gradient-to-br from-gold to-saffron rounded-full flex items-center justify-center shadow-wedding-gold">
+                            <svg className="w-7 h-7 text-maroon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L9.5 8.5L3 9.5L7.5 14L6.5 21L12 17.5L17.5 21L16.5 14L21 9.5L14.5 8.5L12 2Z" />
+                            </svg>
+                        </div>
                     </motion.div>
                     <div>
-                        <h2 className="font-cinzel text-xl font-bold text-gradient-gold">Admin</h2>
-                        <p className="text-cream/50 text-xs font-poppins">Control Panel</p>
+                        <h2 className="font-cinzel text-xl font-bold text-gold">Admin</h2>
+                        <p className="text-gold/70 text-xs font-poppins">Control Panel</p>
                     </div>
                 </div>
             </div>
@@ -88,10 +99,10 @@ const Sidebar = () => {
                         key={item.path}
                         to={item.path}
                         className={({ isActive }) =>
-                            `flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 group
+                            `flex items-center gap-3 px-4 py-3 rounded-wedding transition-all duration-300 group
               ${isActive
-                                ? 'glass-card-premium text-teal-glow shadow-glow-teal'
-                                : 'text-cream/70 hover:text-cream hover:glass-card'
+                                ? 'bg-gradient-to-r from-gold to-saffron text-maroon shadow-wedding-gold font-semibold'
+                                : 'text-gold/80 hover:text-gold hover:bg-gold/10'
                             }`
                         }
                     >
@@ -104,13 +115,14 @@ const Sidebar = () => {
             </nav>
 
             {/* Logout Button */}
-            <div className="p-4 border-t border-teal-glow/10">
+            <div className="p-4 border-t-2 border-border-gold/30">
                 <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={handleLogout}
-                    className="w-full flex items-center gap-3 px-4 py-3 rounded-lg
-                   glass-card text-red-400 hover:shadow-glow-violet
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-wedding
+                   bg-red-600/20 text-red-300 hover:bg-red-600/30 hover:text-red-200
+                   border-2 border-red-500/30 hover:border-red-500/50
                    transition-all duration-300 group"
                 >
                     <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

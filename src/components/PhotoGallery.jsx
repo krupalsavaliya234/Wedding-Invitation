@@ -62,30 +62,30 @@ const PhotoGallery = () => {
     }, [selectedImage]);
 
     return (
-        <section id="gallery" className="py-16 px-6 bg-gradient-to-b from-cream to-white">
+        <section id="gallery" className="py-16 md:py-20 px-6 bg-gradient-to-b from-white to-ivory/50">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center mb-6">
-                        <div className="h-px w-16 md:w-24 bg-gold"></div>
-                        <span className="mx-3 md:mx-4 text-gold text-2xl md:text-3xl">❖</span>
-                        <div className="h-px w-16 md:w-24 bg-gold"></div>
+                        <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent via-border-gold to-transparent"></div>
+                        <span className="mx-4 text-gold text-3xl md:text-4xl">❖</span>
+                        <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent via-border-gold to-transparent"></div>
                     </div>
 
-                    <h2 className="font-playfair text-3xl md:text-5xl font-bold text-maroon mb-4">
+                    <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gold mb-4">
                         {t('our_memories')}
                     </h2>
-                    <p className="font-poppins text-base md:text-lg text-gray-700">
+                    <p className="font-poppins text-base md:text-lg text-text-secondary">
                         {t('gallery_subtitle')}
                     </p>
                 </div>
 
-                {/* Masonry Grid - 2 columns on mobile, 4 on desktop */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                {/* Masonry Grid - Premium Design */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     {photos.map((photo) => (
                         <div
                             key={photo.id}
-                            className="relative overflow-hidden rounded-lg cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300"
+                            className="relative overflow-hidden rounded-wedding-lg cursor-pointer group shadow-wedding-gold hover:shadow-wedding-maroon transition-all duration-300 border-2 border-border-gold/30 hover:border-gold"
                             onClick={() => setSelectedImage(photo)}
                         >
                             <img
@@ -94,19 +94,21 @@ const PhotoGallery = () => {
                                 loading="lazy"
                                 className="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-maroon/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                <svg className="w-8 h-8 text-cream" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
-                                </svg>
+                            <div className="absolute inset-0 bg-gradient-to-t from-maroon/70 via-maroon/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                <div className="bg-gold/90 rounded-full p-2">
+                                    <svg className="w-6 h-6 text-maroon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Lightbox with Swipe-to-Close */}
+                {/* Lightbox with Swipe-to-Close - Premium Design */}
                 {selectedImage && (
                     <div
-                        className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in"
+                        className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in backdrop-blur-sm"
                         onClick={() => setSelectedImage(null)}
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
@@ -114,7 +116,7 @@ const PhotoGallery = () => {
                     >
                         {/* Close Button */}
                         <button
-                            className="absolute top-4 right-4 md:top-8 md:right-8 text-cream hover:text-gold transition-colors z-10"
+                            className="absolute top-4 right-4 md:top-8 md:right-8 text-gold hover:text-saffron transition-colors z-10 bg-maroon/80 rounded-full p-2 hover:bg-maroon"
                             onClick={() => setSelectedImage(null)}
                             aria-label="Close"
                         >
@@ -125,11 +127,11 @@ const PhotoGallery = () => {
 
                         {/* Swipe Indicator (Mobile) */}
                         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 md:hidden">
-                            <div className="flex flex-col items-center text-cream/70">
+                            <div className="flex flex-col items-center text-gold/80">
                                 <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                 </svg>
-                                <span className="text-xs mt-1">Swipe down to close</span>
+                                <span className="text-xs mt-1 font-poppins">Swipe down to close</span>
                             </div>
                         </div>
 
@@ -137,13 +139,13 @@ const PhotoGallery = () => {
                         <img
                             src={selectedImage.url}
                             alt={selectedImage.alt}
-                            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                            className="max-w-full max-h-[90vh] object-contain rounded-wedding-lg border-2 border-border-gold shadow-wedding-gold"
                             onClick={(e) => e.stopPropagation()}
                         />
 
                         {/* Image Caption */}
                         <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-                            <p className="font-poppins text-cream text-sm md:text-base bg-black/50 px-4 py-2 rounded-full">
+                            <p className="font-poppins text-gold text-sm md:text-base bg-maroon/90 px-6 py-3 rounded-wedding-xl border border-border-gold">
                                 {selectedImage.alt}
                             </p>
                         </div>

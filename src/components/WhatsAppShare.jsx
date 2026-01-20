@@ -14,7 +14,7 @@ const WhatsAppShare = () => {
     return (
         <button
             onClick={handleShare}
-            className="fixed bottom-20 md:bottom-6 left-6 z-40 md:hidden bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 font-poppins font-semibold"
+            className="fixed bottom-20 md:bottom-6 left-6 z-40 md:hidden bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-wedding-xl shadow-wedding-gold border-2 border-green-400/30 hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 font-poppins font-semibold"
             aria-label="Share via WhatsApp"
         >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

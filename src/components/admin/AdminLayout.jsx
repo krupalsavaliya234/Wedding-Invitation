@@ -5,18 +5,17 @@ import VolumetricLighting from '../VolumetricLighting';
 
 const AdminLayout = () => {
     return (
-        <div className="min-h-screen flex relative overflow-hidden">
+        <div className="min-h-screen flex relative overflow-hidden bg-ivory">
             {/* Volumetric Lighting */}
             <VolumetricLighting />
 
-            {/* Grid Background */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none"
+            {/* Decorative Background Pattern */}
+            <div className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
                     backgroundImage: `
-            linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
+            radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(122, 30, 45, 0.1) 0%, transparent 50%)
           `,
-                    backgroundSize: '50px 50px',
                 }}
             />
 
@@ -24,7 +23,7 @@ const AdminLayout = () => {
             <Sidebar />
 
             {/* Main Content */}
-            <main className="flex-1 relative z-10 overflow-y-auto">
+            <main className="flex-1 relative z-10 overflow-y-auto bg-gradient-to-br from-ivory to-white/50">
                 <div className="p-8">
                     <Outlet />
                 </div>

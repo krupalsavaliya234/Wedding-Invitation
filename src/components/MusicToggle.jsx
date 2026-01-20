@@ -7,7 +7,7 @@ const MusicToggle = () => {
     return (
         <button
             onClick={toggle}
-            className="fixed top-6 right-6 z-50 bg-maroon text-gold p-4 rounded-full shadow-lg hover:bg-gold hover:text-maroon transition-all duration-300 hover:scale-110 animate-fade-in"
+            className="fixed top-6 right-6 z-50 bg-gradient-to-br from-maroon to-maroon/90 text-gold p-4 rounded-full shadow-wedding-gold border-2 border-border-gold hover:bg-gradient-to-br hover:from-gold hover:to-saffron hover:text-maroon transition-all duration-300 hover:scale-110 animate-fade-in hover:shadow-wedding-maroon"
             aria-label={isPlaying ? 'Pause Music' : 'Play Music'}
         >
             {isPlaying ? (

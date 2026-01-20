@@ -7,9 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        maroon: '#800000',
-        gold: '#D4AF37',
-        cream: '#FFFDD0',
+        // Traditional Indian Wedding Theme Colors
+        maroon: '#7A1E2D',           // Deep Maroon - Primary
+        gold: '#D4AF37',             // Royal Gold - Secondary
+        saffron: '#FF9933',          // Saffron - Accent
+        ivory: '#FFF8ED',            // Ivory/Cream - Background
+        'text-primary': '#3B1F1F',   // Dark Brown - Text Primary
+        'text-secondary': '#8C6A2F', // Muted Gold - Text Secondary
+        'border-gold': '#E6C87A',    // Soft Gold - Border
+        // Legacy colors for compatibility
+        cream: '#FFF8ED',
         obsidian: '#0a0a0f',
         'teal-glow': '#00d4ff',
         'violet-glow': '#b794f6',
@@ -20,14 +27,19 @@ export default {
         'soft-peach': '#F5D5C8',
       },
       fontFamily: {
+        // Heading Fonts - Elegant Serif
         playfair: ['Playfair Display', 'serif'],
+        cinzel: ['Cinzel', 'serif'],
+        // Body Fonts - Readable Modern
         poppins: ['Poppins', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        // Decorative Fonts
+        'great-vibes': ['Great Vibes', 'cursive'],
+        // Legacy fonts for compatibility
         hind: ['Hind', 'sans-serif'],
         gujarati: ['Noto Sans Gujarati', 'sans-serif'],
         signature: ['Great Vibes', 'Alex Brush', 'cursive'],
-        'great-vibes': ['Great Vibes', 'cursive'],
         'alex-brush': ['Alex Brush', 'cursive'],
-        cinzel: ['Cinzel', 'serif'],
         bodoni: ['Bodoni Moda', 'serif'],
       },
       animation: {
@@ -72,12 +84,19 @@ export default {
       backdropBlur: {
         xs: '2px',
       },
+      borderRadius: {
+        'wedding': '12px',
+        'wedding-lg': '20px',
+        'wedding-xl': '30px',
+      },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
         'glass-premium': '0 20px 60px rgba(0, 212, 255, 0.15), 0 10px 40px rgba(183, 148, 246, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.15)',
         'glow-teal': '0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3)',
         'glow-violet': '0 0 20px rgba(183, 148, 246, 0.5), 0 0 40px rgba(183, 148, 246, 0.3)',
         'glow-gold': '0 0 20px rgba(212, 175, 55, 0.6), 0 0 40px rgba(212, 175, 55, 0.4)',
+        'wedding-gold': '0 4px 20px rgba(212, 175, 55, 0.3), 0 0 0 1px rgba(230, 200, 122, 0.2)',
+        'wedding-maroon': '0 4px 20px rgba(122, 30, 45, 0.3), 0 0 0 1px rgba(122, 30, 45, 0.2)',
       },
     },
   },

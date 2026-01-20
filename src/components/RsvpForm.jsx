@@ -157,8 +157,25 @@ const RsvpForm = () => {
 
     return (
         <>
-            <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-2xl p-6 md:p-10 border-4 border-gold">
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <section className="py-16 md:py-20 px-6 bg-gradient-to-b from-white to-ivory/50">
+                <div className="max-w-3xl mx-auto">
+                    {/* Section Header */}
+                    <div className="text-center mb-12">
+                        <div className="flex items-center justify-center mb-6">
+                            <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent via-border-gold to-transparent" />
+                            <span className="mx-4 text-gold text-3xl md:text-4xl">❖</span>
+                            <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent via-border-gold to-transparent" />
+                        </div>
+                        <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gold mb-4">
+                            RSVP
+                        </h2>
+                        <p className="font-poppins text-text-secondary text-base md:text-lg">
+                            Please confirm your attendance
+                        </p>
+                    </div>
+
+                    <div className="card-wedding bg-white/95 backdrop-blur-sm border-2 border-border-gold">
+                        <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name - Floating Label */}
                     <div className="relative">
                         <input
@@ -169,9 +186,9 @@ const RsvpForm = () => {
                             onChange={handleChange}
                             onFocus={() => handleFocus('name')}
                             onBlur={() => handleBlur('name')}
-                            className={`w-full px-4 py-4 border-2 rounded-lg focus:outline-none transition-all font-poppins text-base ${errors.name
+                            className={`w-full px-4 py-4 border-2 rounded-wedding focus:outline-none transition-all font-poppins text-base bg-ivory/50 ${errors.name
                                     ? 'border-red-500 focus:border-red-500'
-                                    : 'border-gold/30 focus:border-gold'
+                                    : 'border-border-gold focus:border-gold focus:ring-2 focus:ring-gold/20'
                                 }`}
                             placeholder=" "
                         />
@@ -199,9 +216,9 @@ const RsvpForm = () => {
                             onChange={handleChange}
                             onFocus={() => handleFocus('email')}
                             onBlur={() => handleBlur('email')}
-                            className={`w-full px-4 py-4 border-2 rounded-lg focus:outline-none transition-all font-poppins text-base ${errors.email
+                            className={`w-full px-4 py-4 border-2 rounded-wedding focus:outline-none transition-all font-poppins text-base bg-ivory/50 ${errors.email
                                     ? 'border-red-500 focus:border-red-500'
-                                    : 'border-gold/30 focus:border-gold'
+                                    : 'border-border-gold focus:border-gold focus:ring-2 focus:ring-gold/20'
                                 }`}
                             placeholder=" "
                         />
@@ -230,9 +247,9 @@ const RsvpForm = () => {
                             onChange={handleChange}
                             onFocus={() => handleFocus('phone')}
                             onBlur={() => handleBlur('phone')}
-                            className={`w-full px-4 py-4 border-2 rounded-lg focus:outline-none transition-all font-poppins text-base ${errors.phone
+                            className={`w-full px-4 py-4 border-2 rounded-wedding focus:outline-none transition-all font-poppins text-base bg-ivory/50 ${errors.phone
                                     ? 'border-red-500 focus:border-red-500'
-                                    : 'border-gold/30 focus:border-gold'
+                                    : 'border-border-gold focus:border-gold focus:ring-2 focus:ring-gold/20'
                                 }`}
                             placeholder=" "
                         />
@@ -260,7 +277,7 @@ const RsvpForm = () => {
                             name="attendance"
                             value={formData.attendance}
                             onChange={handleChange}
-                            className="w-full px-4 py-4 border-2 border-gold/30 rounded-lg focus:border-gold focus:outline-none transition-colors font-poppins bg-white text-base"
+                            className="w-full px-4 py-4 border-2 border-border-gold rounded-wedding focus:border-gold focus:outline-none transition-colors font-poppins bg-ivory/50 text-base focus:ring-2 focus:ring-gold/20"
                         >
                             <option value="yes">Joyfully Accept</option>
                             <option value="no">Regretfully Decline</option>
@@ -282,7 +299,7 @@ const RsvpForm = () => {
                                 onChange={handleChange}
                                 min="1"
                                 max="10"
-                                className="w-full px-4 py-4 border-2 border-gold/30 rounded-lg focus:border-gold focus:outline-none transition-colors font-poppins text-base"
+                                className="w-full px-4 py-4 border-2 border-border-gold rounded-wedding focus:border-gold focus:outline-none transition-colors font-poppins bg-ivory/50 text-base focus:ring-2 focus:ring-gold/20"
                             />
                         </div>
                     )}
@@ -297,7 +314,7 @@ const RsvpForm = () => {
                             onFocus={() => handleFocus('message')}
                             onBlur={() => handleBlur('message')}
                             rows="4"
-                            className="w-full px-4 py-4 border-2 border-gold/30 rounded-lg focus:border-gold focus:outline-none transition-colors font-poppins resize-none text-base"
+                            className="w-full px-4 py-4 border-2 border-border-gold rounded-wedding focus:border-gold focus:outline-none transition-colors font-poppins resize-none text-base bg-ivory/50 focus:ring-2 focus:ring-gold/20"
                             placeholder=" "
                         ></textarea>
                         <label
@@ -321,11 +338,11 @@ const RsvpForm = () => {
                         </div>
                     )}
 
-                    {/* Submit Button - Large and Mobile Friendly */}
+                    {/* Submit Button - Premium Design */}
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-maroon to-maroon/90 hover:from-gold hover:to-gold/90 text-cream font-playfair text-xl font-semibold py-5 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
+                        className="btn-wedding-primary w-full font-playfair text-xl font-semibold py-5 px-6 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {isSubmitting ? (
                             <span className="flex items-center justify-center gap-2">
@@ -338,34 +355,36 @@ const RsvpForm = () => {
                         ) : (
                             'Submit RSVP'
                         )}
-                    </button>
+                        </button>
                 </form>
-            </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Thank You Popup with Confetti */}
             {showThankYou && (
-                <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 animate-fade-in">
-                    <div className="bg-white rounded-2xl p-8 md:p-12 max-w-md w-full text-center shadow-2xl transform animate-slide-up">
+                <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 animate-fade-in backdrop-blur-sm">
+                    <div className="card-wedding bg-white border-2 border-border-gold p-8 md:p-12 max-w-md w-full text-center shadow-wedding-gold transform animate-slide-up">
                         <div className="mb-6">
-                            <div className="w-20 h-20 bg-gradient-to-br from-maroon to-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-10 h-10 text-cream" fill="currentColor" viewBox="0 0 24 24">
+                            <div className="w-24 h-24 bg-gradient-to-br from-gold to-saffron rounded-full flex items-center justify-center mx-auto mb-6 shadow-wedding-gold">
+                                <svg className="w-12 h-12 text-maroon" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                                 </svg>
                             </div>
-                            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-maroon mb-3">
+                            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-gold mb-4">
                                 Thank You!
                             </h3>
-                            <p className="font-poppins text-lg text-gray-700 mb-2">
+                            <p className="font-poppins text-lg text-text-primary mb-3">
                                 Your RSVP has been received successfully.
                             </p>
-                            <p className="font-poppins text-base text-gold">
+                            <p className="font-poppins text-base text-text-secondary">
                                 We can't wait to celebrate with you! 🎉
                             </p>
                         </div>
 
                         <button
                             onClick={() => setShowThankYou(false)}
-                            className="bg-gradient-to-r from-maroon to-gold text-cream font-poppins font-semibold py-3 px-8 rounded-lg hover:shadow-lg transition-all duration-300"
+                            className="btn-wedding-primary font-poppins font-semibold py-3 px-8"
                         >
                             Close
                         </button>

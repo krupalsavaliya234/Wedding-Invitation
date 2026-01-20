@@ -23,7 +23,7 @@ const LanguageSwitcher = () => {
             {/* Language Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-maroon to-gold text-cream rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-poppins font-semibold transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-maroon to-maroon/90 text-gold rounded-wedding shadow-wedding-gold border-2 border-border-gold hover:bg-gradient-to-r hover:from-gold hover:to-saffron hover:text-maroon transition-all duration-300 font-poppins font-semibold transform hover:scale-105 hover:shadow-wedding-maroon"
                 aria-label="Change Language"
             >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,20 +45,20 @@ const LanguageSwitcher = () => {
                     ></div>
 
                     {/* Dropdown */}
-                    <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl border-2 border-gold overflow-hidden z-40 animate-slide-up">
+                    <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-wedding-lg shadow-wedding-gold border-2 border-border-gold overflow-hidden z-40 animate-slide-up">
                         {languages.map((lang) => (
                             <button
                                 key={lang.code}
                                 onClick={() => changeLanguage(lang.code)}
                                 className={`w-full px-4 py-3 text-left transition-all duration-200 font-poppins ${i18n.language === lang.code
-                                        ? 'bg-gradient-to-r from-maroon to-gold text-cream font-semibold'
-                                        : 'text-maroon hover:bg-gold/20 hover:text-gold'
+                                        ? 'bg-gradient-to-r from-maroon to-maroon/90 text-gold font-semibold'
+                                        : 'text-text-primary hover:bg-gold/20 hover:text-maroon'
                                     }`}
                             >
                                 <div className="flex items-center justify-between">
                                     <span className="text-base">{lang.nativeName}</span>
                                     {i18n.language === lang.code && (
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                                         </svg>
                                     )}
